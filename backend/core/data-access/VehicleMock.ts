@@ -10,10 +10,10 @@ export default class VehicleMock implements VehicleRepository{
         new Vehicle("xyz987", "FVV-9897")
     ];
 
-    getByPlate(plate: string): Promise<Vehicle> {
+    getByPlate(plate: string): Vehicle {
         const vehicle = this.vehicles.find(v => v.plate === plate);
-        if(vehicle) return Promise.resolve(vehicle);
-        return Promise.resolve(this.vehicles[0]);
+        if(vehicle) return vehicle;
+        return null;
     }
 
 }

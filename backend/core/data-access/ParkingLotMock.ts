@@ -1,7 +1,7 @@
 import ParkingLot from "../entity/ParkingLot";
 import ParkingLotRepository from "../repository/ParkingLotRepository";
 
-export class ParkingLotMock implements ParkingLotRepository {
+export default class ParkingLotMock implements ParkingLotRepository {
 
     parkingLots: ParkingLot[] = [
         new ParkingLot("", 0,0,0,0),
